@@ -1,10 +1,12 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import MobxTest from './mobxTest';
 import { observable } from 'mobx';
+import HookTest from './hookTest';
+import RouteDemo from './reactRouter/reactTest';
 
 var mobxData = observable({
   name:'刘温伯',
@@ -19,9 +21,10 @@ var mobxData = observable({
  
 })
 
+
 ReactDOM.render(
   
-    <MobxTest mobxData={mobxData}/>
+    <HookTest mobxData = {mobxData}/>
  ,
   document.getElementById('root')
 );
